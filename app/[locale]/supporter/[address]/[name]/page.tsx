@@ -1,5 +1,6 @@
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationsProvider";
+import { getSupporter } from "@/services/supporter/getSupporter";
 import type { Metadata } from "next";
 
 const i18nNamespaces = ["regenerator-page"];
@@ -21,6 +22,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function RegeneratorPage({ params }: Props) {
   const { address, locale, name } = await params;
   const { t, resources } = await initTranslations(locale, i18nNamespaces);
+
+  const supporter = await getSupporter(address)
 
   return (
     <TranslationsProvider

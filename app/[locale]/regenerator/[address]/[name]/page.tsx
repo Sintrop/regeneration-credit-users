@@ -1,5 +1,6 @@
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationsProvider";
+import { getRegenerator } from "@/services/regenerator/getRegenerator";
 import type { Metadata } from "next";
 
 const i18nNamespaces = ["regenerator-page"];
@@ -22,6 +23,8 @@ export default async function SupporterPage({ params }: Props) {
   const { address, locale, name } = await params;
   const { t, resources } = await initTranslations(locale, i18nNamespaces);
 
+  const regenerator = await getRegenerator(address)
+
   return (
     <TranslationsProvider
       namespaces={i18nNamespaces}
@@ -29,7 +32,7 @@ export default async function SupporterPage({ params }: Props) {
       resources={resources}
     >
       <main>
-        <div className="container mx-auto px-5 lg:px-20">
+        <div className="container mx-auto px-5 py-10 lg:py-20 lg:px-20">
           {address}
           {name}
         </div>
