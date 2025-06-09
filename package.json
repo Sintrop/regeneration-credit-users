@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ukstv/jazzicon-react": "^1.0.0",
     "i18next": "^24.2.2",
     "i18next-resources-to-backend": "^1.2.1",
     "next": "15.3.3",
