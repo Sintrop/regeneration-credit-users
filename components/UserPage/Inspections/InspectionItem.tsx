@@ -20,7 +20,7 @@ export function InspectionItem({ inspection, t }: Props) {
           <p className="text-sm">{t('proofPhoto')}</p>
           <Image
             alt="proof photo of inspection"
-            src={`${process.env.NEXT_APP_IPFS_GATEWAY}/ipfs/${inspection.proofPhoto}`}
+            src={`${process.env.NEXT_PUBLIC_IPFS_GATEWAY}/ipfs/${inspection.proofPhoto}`}
             width={128}
             height={128}
             className="absolute top-0 left-0"
@@ -45,7 +45,7 @@ export function InspectionItem({ inspection, t }: Props) {
       
       <div className="flex items-center gap-10 justify-center mt-3">
         <Link
-          href={`${process.env.NEXT_APP_IPFS_GATEWAY}/ipfs/${inspection.report}`}
+          href={`${process.env.NEXT_PUBLIC_IPFS_GATEWAY}/ipfs/${inspection.report}`}
           target="_blank"
           rel="noreferer noopener"
           className="underline text-blue-600"

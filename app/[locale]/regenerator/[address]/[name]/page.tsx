@@ -9,6 +9,7 @@ import { getRegenerator } from "@/services/regenerator/getRegenerator";
 import LogoRC from "@/public/assets/images/rc.png";
 import Image from "next/image";
 import { Inspections } from "@/components/UserPage/Inspections/Inspections";
+import { MapArea } from "@/components/UserPage/RegenerationAreaMap/MapArea";
 
 const i18nNamespaces = ["regenerator-page"];
 
@@ -74,6 +75,8 @@ export default async function SupporterPage({ params }: Props) {
                 }
                 t={t}
               />
+
+              <MapArea t={t} address={address} />
 
               <Inspections t={t} address={address} />
             </div>

@@ -19,7 +19,7 @@ export function ProofPhoto({ hash, size = 50 , address }: Props) {
       {hash && (
         <Image
           alt="profile photo"
-          src={`${process.env.NEXT_APP_IPFS_GATEWAY}/ipfs/${hash}`}
+          src={`${process.env.NEXT_PUBLIC_IPFS_GATEWAY}/ipfs/${hash}`}
           className="w-full h-full rounded-full object-cover absoulte"
           width={200}
           height={200}
