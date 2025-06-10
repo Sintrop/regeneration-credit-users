@@ -26,6 +26,7 @@ export function Hero({ address, name, hashPhoto, t, userType }: Props) {
 
         <section className="mt-5">
           <h1 className="font-bold text-xl">{name}</h1>
+          <h2 className="text-black text-xl">{address}</h2>
           <p className="text-gray-700">
             {userType === 1 ? t('regenerator') : t('supporter')}
           </p>
