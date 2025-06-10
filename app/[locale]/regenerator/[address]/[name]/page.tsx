@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationsProvider";
 import { About } from "@/components/UserPage/About/About";
-import { BurnedTokens } from "@/components/UserPage/BurnedTokens/BurnedTokens";
 import { Hero } from "@/components/UserPage/Hero/Hero";
 import { Score } from "@/components/UserPage/Score/Score";
 import { getRegenerator } from "@/services/regenerator/getRegenerator";
@@ -10,6 +9,7 @@ import LogoRC from "@/public/assets/images/rc.png";
 import Image from "next/image";
 import { Inspections } from "@/components/UserPage/Inspections/Inspections";
 import { MapArea } from "@/components/UserPage/RegenerationAreaMap/MapArea";
+import { UserDelations } from "@/components/UserPage/UserDelations/UserDelations";
 
 const i18nNamespaces = ["regenerator-page"];
 
@@ -82,7 +82,7 @@ export default async function SupporterPage({ params }: Props) {
             </div>
 
             <div className="flex flex-col gap-3">
-              <BurnedTokens address={address} t={t} />
+              <UserDelations address={address} t={t} />
             </div>
           </div>
         </div>
