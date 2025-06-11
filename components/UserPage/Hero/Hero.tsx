@@ -1,7 +1,8 @@
+import Image from "next/image";
 import { ProofPhoto } from "@/components/ProofPhoto/ProofPhoto";
 import { getAreaPhoto } from "@/services/regenerator/getAreaPhoto";
 import { TType } from "@/types/t";
-import Image from "next/image";
+import BgFlorest from '@/public/assets/images/bg-florest.jpg'
 
 interface Props {
   address: string;
@@ -17,12 +18,20 @@ export async function Hero({ address, name, hashPhoto, t, userType }: Props) {
   return (
     <div className="w-full lg:w-[720px] flex flex-col rounded-2xl overflow-hidden bg-gray-200">
       <div className="w-full h-[180px] relative bg-green-600">
-        {areaPhoto !== '' && (
+        {areaPhoto === '' ? (
           <Image
             alt="hero image"
             width={720}
             height={300}
-            className="w-full h-[180px] object-contain"
+            className="w-full h-[180px] object-cover"
+            src={BgFlorest}
+          />
+        ) : (
+          <Image
+            alt="hero image"
+            width={720}
+            height={300}
+            className="w-full h-[180px] object-cover"
             src={`${process.env.NEXT_PUBLIC_IPFS_GATEWAY}/ipfs/${areaPhoto}`}
           />
         )}
