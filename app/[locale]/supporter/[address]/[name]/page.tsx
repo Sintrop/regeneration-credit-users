@@ -6,6 +6,8 @@ import TranslationsProvider from "@/components/TranslationsProvider";
 import { getSupporter } from "@/services/supporter/getSupporter";
 import { Hero } from "@/components/UserPage/Hero/Hero";
 import { BurnedTokens } from "@/components/UserPage/BurnedTokens/BurnedTokens";
+import { About } from "@/components/UserPage/About/About";
+import { ReductionCommitments } from "@/components/UserPage/ReductionCommitments/ReductionCommitments";
 
 const i18nNamespaces = ["regenerator-page"];
 
@@ -60,7 +62,11 @@ export default async function SupporterPage({ params }: Props) {
                 t={t}
               />
 
+              <About t={t} address={address} />
+
               <BurnedTokens address={address} t={t} />
+
+              <ReductionCommitments address={address} t={t} />
             </div>
           </div>
         </div>
