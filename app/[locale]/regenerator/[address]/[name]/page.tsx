@@ -40,7 +40,7 @@ export default async function SupporterPage({ params }: Props) {
       resources={resources}
     >
       <main>
-        <div className="container mx-auto px-5 pt-10 lg:px-20 flex flex-col">
+        <div className="container mx-auto px-5 pt-10 lg:px-20 flex flex-col pb-10">
           <div className="flex items-center justify-center gap-3">
             <Image
               alt="Logo regeneration credit"
@@ -49,7 +49,9 @@ export default async function SupporterPage({ params }: Props) {
               height={50}
               quality={100}
             />
-            <p className="text-balck font-bold uppercase">{t('regenerationCredit')}</p>
+            <p className="text-balck font-bold uppercase">
+              {t("regenerationCredit")}
+            </p>
           </div>
 
           <div className="flex flex-wrap justify-center gap-5 mt-10">
@@ -62,10 +64,7 @@ export default async function SupporterPage({ params }: Props) {
                 t={t}
               />
 
-              <About
-                aboutText="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
-                t={t}
-              />
+              <About address={address} t={t} />
 
               <Score
                 score={regenerator ? regenerator.regenerationScore.score : 0}
