@@ -37,6 +37,15 @@ export function SearchInput() {
         setIsLoading(false);
         return;
       }
+
+      if (userType.userType === 0) {
+        setErrorMessage("userNotFound");
+        setIsLoading(false);
+        return;
+      }
+
+      setErrorMessage("thisUserTypeIsNotARegeneratorOrSupporter");
+      setIsLoading(false);
     } else {
       setIsLoading(false);
       setErrorMessage("userNotFound");

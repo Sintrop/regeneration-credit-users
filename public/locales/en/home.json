@@ -1,5 +1,10 @@
 {
   "seo-title": "Regeneration credit users",
   "seo-description": "Regeneration credit users",
-  "regenerationCredit": "Regeneration credit"
+  "regenerationCredit": "Regeneration credit",
+  "typeAddressToSearchUser": "Type address to search a user",
+  "typeHere": "Type here",
+  "search": "Search",
+  "userNotFound": "User not found",
+  "thisUserTypeIsNotARegeneratorOrSupporter": "This user type is not a Regenerator or Supporter"
 }
