@@ -12,8 +12,9 @@ export async function getSupporter(address: string): Promise<SupporterProps> {
     publicationsCount: parseInt(String(response.publicationsCount).replace('n', '')),
     profilePhoto: response.profilePhoto,
     reductionItemsCount: parseInt(String(response.reductionItemsCount).replace('n', '')),
-    supporterWallet: response.supporterWallet
+    supporterWallet: response.supporterWallet,
+    description: response.description
   }
-  
+
   return data;
 }

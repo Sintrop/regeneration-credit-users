@@ -7,4 +7,5 @@ export interface SupporterProps {
   publicationsCount: number
   offsetsCount: number
   reductionItemsCount: number
+  description: string
 }

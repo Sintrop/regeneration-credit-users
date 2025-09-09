@@ -62,7 +62,7 @@ export default async function SupporterPage({ params }: Props) {
                 t={t}
               />
 
-              <About t={t} address={address} />
+              <About t={t} description={supporter.description} />
 
               <BurnedTokens address={address} t={t} />
 

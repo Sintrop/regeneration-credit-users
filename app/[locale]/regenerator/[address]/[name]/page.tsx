@@ -11,6 +11,7 @@ import { Inspections } from "@/components/UserPage/Inspections/Inspections";
 import { MapArea } from "@/components/UserPage/RegenerationAreaMap/MapArea";
 import { UserDelations } from "@/components/UserPage/UserDelations/UserDelations";
 import Link from "next/link";
+import { getProjectDescription } from "@/services/regenerator/getProjectDescription";
 
 const i18nNamespaces = ["regenerator"];
 
@@ -33,6 +34,7 @@ export default async function SupporterPage({ params }: Props) {
   const { t, resources } = await initTranslations(locale, i18nNamespaces);
 
   const regenerator = await getRegenerator(address);
+  const projectDescription = await getProjectDescription(address);
 
   return (
     <TranslationsProvider
@@ -65,7 +67,7 @@ export default async function SupporterPage({ params }: Props) {
                 t={t}
               />
 
-              <About address={address} t={t} />
+              <About description={projectDescription} t={t} />
 
               <Score
                 score={regenerator ? regenerator.regenerationScore.score : 0}
