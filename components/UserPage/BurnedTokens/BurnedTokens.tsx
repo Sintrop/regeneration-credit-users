@@ -55,7 +55,7 @@ export async function BurnedTokens({ address, t }: Props) {
               }).format(burnedTokens * treesPerToken)}
             />
             <ImpactItem
-              label={t("soil")}
+              label={t("area")}
               value={Intl.NumberFormat("pt-BR", {
                 maximumFractionDigits: 0,
               }).format(burnedTokens * soilPerToken)}

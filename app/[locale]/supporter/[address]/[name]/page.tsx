@@ -10,7 +10,7 @@ import { About } from "@/components/UserPage/About/About";
 import { ReductionCommitments } from "@/components/UserPage/ReductionCommitments/ReductionCommitments";
 import Link from "next/link";
 
-const i18nNamespaces = ["regenerator-page"];
+const i18nNamespaces = ["supporter"];
 
 type Props = {
   params: Promise<{ locale: string; address: string; name: string }>;

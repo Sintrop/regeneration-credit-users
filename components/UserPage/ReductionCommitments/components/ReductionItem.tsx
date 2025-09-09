@@ -44,11 +44,11 @@ interface ImpactItemProps {
 }
 function ImpactItem({ label, value, suffix }: ImpactItemProps) {
   return (
-    <div className="flex flex-col items-center justify-center w-[120px] h-[60px]">
+    <div className="flex flex-col items-center justify-center w-[150px] h-[60px]">
       <p className="font-bold text-green-600 text-xl">
         {value} {suffix && suffix}
       </p>
-      <p>{label}</p>
+      <p className="text-center">{label}</p>
     </div>
   );
 }
