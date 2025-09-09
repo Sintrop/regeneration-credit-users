@@ -10,6 +10,7 @@ import Image from "next/image";
 import { Inspections } from "@/components/UserPage/Inspections/Inspections";
 import { MapArea } from "@/components/UserPage/RegenerationAreaMap/MapArea";
 import { UserDelations } from "@/components/UserPage/UserDelations/UserDelations";
+import Link from "next/link";
 
 const i18nNamespaces = ["regenerator-page"];
 
@@ -41,7 +42,7 @@ export default async function SupporterPage({ params }: Props) {
     >
       <main>
         <div className="container mx-auto px-5 pt-10 lg:px-20 flex flex-col pb-10">
-          <div className="flex items-center justify-center gap-3">
+          <Link href="/" className="flex items-center justify-center gap-3">
             <Image
               alt="Logo regeneration credit"
               src={LogoRC}
@@ -52,7 +53,7 @@ export default async function SupporterPage({ params }: Props) {
             <p className="text-balck font-bold uppercase">
               {t("regenerationCredit")}
             </p>
-          </div>
+          </Link>
 
           <div className="flex flex-wrap justify-center gap-5 mt-10">
             <div className="flex flex-col gap-3">

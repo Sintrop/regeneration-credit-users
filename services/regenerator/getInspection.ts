@@ -13,10 +13,10 @@ export async function getInspection(inspectionId: number): Promise<InspectionPro
     inspectedAtEra: parseInt(String(response.inspectedAtEra).replace('n', '')),
     inspector: response.inspector,
     invalidatedAt: parseInt(String(response.invalidatedAt).replace('n', '')),
-    proofPhoto: response.proofPhoto,
+    proofPhotos: response.proofPhotos,
     regenerationScore: parseInt(String(response.regenerationScore).replace('n', '')),
     regenerator: response.regenerator,
-    report: response.report,
+    justificationReport: response.justificationReport,
     status: parseInt(String(response.status).replace('n', '')),
     treesResult: parseInt(String(response.treesResult).replace('n', '')),
     validationsCount: parseInt(String(response.validationsCount).replace('n', ''))
