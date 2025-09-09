@@ -1,6 +1,10 @@
+import type { Metadata } from "next";
+
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationsProvider";
-import type { Metadata } from "next";
+
+import { LogoHome } from "./components/LogoHome";
+import { SearchInput } from "./components/SearchInput";
 
 const i18nNamespaces = ["home"];
 
@@ -33,8 +37,9 @@ export default async function Home({
       resources={resources}
     >
       <main>
-        <div className="container mx-auto px-5 lg:px-20">
-          teste
+        <div className="container mx-auto px-5 lg:px-20 flex flex-col items-center justify-center w-full h-screen gap-10">
+          <LogoHome t={t} />
+          <SearchInput />
         </div>
       </main>
     </TranslationsProvider>
