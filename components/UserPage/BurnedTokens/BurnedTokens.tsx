@@ -19,11 +19,13 @@ export async function BurnedTokens({ address, t }: Props) {
 
   return (
     <section className="w-full lg:w-[720px] flex flex-col rounded-2xl overflow-hidden bg-gray-200 gap-3 p-5">
-      <h3 className="font-bold text-black text-xl">{t("contributedWith")}</h3>
+      <h3 className="font-bold text-black md:text-xl">
+        {t("contributedWith")}
+      </h3>
 
       <div className="flex flex-wrap mt-5">
-        <div className="w-full lg:w-[50%]">
-          <p className="font-bold text-green-600 text-5xl">
+        <div className="w-full mb-5 lg:mb-0 lg:w-[50%]">
+          <p className="font-bold text-green-600 text-3xl text-center md:text-start md:text-5xl">
             {Intl.NumberFormat("pt-BR", { maximumFractionDigits: 5 }).format(
               burnedTokens
             )}{" "}
@@ -76,10 +78,10 @@ interface ImpactItemProps {
 function ImpactItem({ label, value, suffix }: ImpactItemProps) {
   return (
     <div className="flex flex-col items-center justify-center w-[120px] h-[100px]">
-      <p className="font-bold text-green-600 text-xl">
+      <p className="font-bold text-green-600 md:text-xl">
         {value} {suffix && suffix}
       </p>
-      <p>{label}</p>
+      <p className="text-sm md:text-base">{label}</p>
     </div>
   );
 }

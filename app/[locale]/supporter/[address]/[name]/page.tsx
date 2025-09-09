@@ -58,7 +58,7 @@ export default async function SupporterPage({ params }: Props) {
     >
       <Header t={t} />
       <main>
-        <div className="container mx-auto px-5 lg:px-20 flex flex-col pb-10">
+        <div className="md:container md:mx-auto px-5 lg:px-20 flex flex-col pb-10">
           <div className="flex flex-wrap justify-center gap-5 mt-10">
             <div className="flex flex-col gap-3">
               <Hero

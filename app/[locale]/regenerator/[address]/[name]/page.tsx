@@ -65,7 +65,7 @@ export default async function SupporterPage({ params }: Props) {
       <main>
         <div className="container mx-auto px-5 lg:px-20 flex flex-col pb-10">
           <div className="flex flex-wrap justify-center gap-5 mt-10">
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 w-[90dvw] lg:w-auto">
               <Hero
                 address={address}
                 name={regenerator ? regenerator.name : name}
@@ -90,7 +90,7 @@ export default async function SupporterPage({ params }: Props) {
               <Inspections t={t} address={address} />
             </div>
 
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 w-[90dvw] lg:w-auto">
               <UserDelations address={address} t={t} />
             </div>
           </div>

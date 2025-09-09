@@ -10,14 +10,16 @@ interface Props {
 
 export async function ReductionCommitments({ address, t }: Props) {
   const response = await getReductionCommitments(address);
-  
+
   return (
     <section className="w-full lg:w-[720px] flex flex-col rounded-2xl overflow-hidden bg-gray-200 gap-3 p-5">
-      <h3 className="font-bold text-black text-xl">{t('reductionCommitments')}</h3>
-      
+      <h3 className="font-bold text-black md:text-xl">
+        {t("reductionCommitments")}
+      </h3>
+
       {response.length === 0 ? (
         <div>
-          <p className="">{t('noReductionCommitments')}</p>
+          <p className="">{t("noReductionCommitments")}</p>
         </div>
       ) : (
         <>
@@ -32,5 +34,5 @@ export async function ReductionCommitments({ address, t }: Props) {
         </>
       )}
     </section>
-  )
+  );
 }

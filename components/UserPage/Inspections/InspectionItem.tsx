@@ -12,12 +12,12 @@ export async function InspectionItem({ inspection, t }: Props) {
     <div className="w-full py-5 border-b border-gray-300 flex flex-col relative">
       <StatusInspection status={inspection.status} t={t} />
       <p>ID: {inspection.id}</p>
-      <p>
+      <p className="text-ellipsis max-w-[95%] truncate">
         {t("inspector")}: {inspection.inspector}
       </p>
 
-      <div className="flex items-center gap-10 justify-center mt-3">
-        <div className="w-40 h-32 gap-5 rounded-2xl overflow-hidden relative flex flex-col items-center justify-center">
+      <div className="flex flex-wrap items-center gap-5 justify-center mt-3 md:gap-10 lg:flex-nowrap">
+        <div className="w-full h-32 gap-5 rounded-2xl overflow-hidden relative flex flex-col items-center justify-center md:w-40">
           <Link
             href={`${process.env.NEXT_PUBLIC_IPFS_GATEWAY}/ipfs/${inspection.justificationReport}`}
             target="_blank"

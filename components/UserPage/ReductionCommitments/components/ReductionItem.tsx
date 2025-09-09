@@ -18,7 +18,7 @@ export async function ReductionItem({ calculatorItem, t, address }: Props) {
     <div className="flex flex-col py-3 border-b border-gray-300">
       <p className="font-semibold">{calculatorItem.item}</p>
 
-      <div className="flex flex-wrap mt-3 gap-10">
+      <div className="flex flex-wrap mt-3 gap-10 justify-center md:justify-start">
         <ImpactItem
           label={t("carbonImpact")}
           value={Intl.NumberFormat("pt-BR").format(calculatorItem.carbonImpact)}

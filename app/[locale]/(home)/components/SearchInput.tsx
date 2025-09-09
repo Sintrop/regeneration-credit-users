@@ -59,7 +59,7 @@ export function SearchInput() {
           {t("typeAddressToSearchUser")}:
         </label>
 
-        <div className="flex gap-5">
+        <div className="flex flex-col gap-5 md:flex-row w-[90dvw] lg:w-auto">
           <input
             name="address"
             placeholder={t("typeHere")}
@@ -67,7 +67,7 @@ export function SearchInput() {
           />
 
           <button
-            className="w-32 h-12 rounded-2xl flex items-center justify-center bg-green-600 text-white font-semibold hover:cursor-pointer hover:bg-green-700 duration-200 disabled:cursor-default disabled:opacity-50"
+            className="w-full lg:w-32 h-12 rounded-2xl flex items-center justify-center bg-green-600 text-white font-semibold hover:cursor-pointer hover:bg-green-700 duration-200 disabled:cursor-default disabled:opacity-50"
             type="submit"
             disabled={isLoading}
           >
