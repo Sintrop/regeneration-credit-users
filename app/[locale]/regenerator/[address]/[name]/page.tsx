@@ -12,7 +12,7 @@ import { MapArea } from "@/components/UserPage/RegenerationAreaMap/MapArea";
 import { UserDelations } from "@/components/UserPage/UserDelations/UserDelations";
 import Link from "next/link";
 
-const i18nNamespaces = ["regenerator-page"];
+const i18nNamespaces = ["regenerator"];
 
 type Props = {
   params: Promise<{ locale: string; address: string; name: string }>;
