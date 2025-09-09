@@ -20,12 +20,31 @@ type Props = {
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const locale = (await params).locale;
-  const { t } = await initTranslations(locale, i18nNamespaces);
+  const { locale, address } = await params;
+  const regenerator = await getRegenerator(address);
+  const projectDescription = await getProjectDescription(address);
+
+  const websiteUrl = process.env.NEXT_PUBLIC_WEBSITE_URL;
 
   return {
-    title: t("seo-title"),
-    description: t("seo-description"),
+    title: regenerator.name,
+    description: projectDescription,
+    openGraph: {
+      type: "website",
+      title: regenerator.name,
+      description: projectDescription,
+      alternateLocale: ["en", "pt"],
+      url: `${websiteUrl}/${locale}/regenerator/${address}/${regenerator.name}`,
+      locale,
+      siteName: "Regeneration credit users",
+    },
+    alternates: {
+      canonical: websiteUrl,
+      languages: {
+        en: `${websiteUrl}/en/regenerator/${address}/${regenerator.name}`,
+        pt: `${websiteUrl}/pt/regenerator/${address}/${regenerator.name}`,
+      },
+    },
   };
 }
 

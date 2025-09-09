@@ -17,12 +17,31 @@ type Props = {
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const locale = (await params).locale;
-  const { t } = await initTranslations(locale, i18nNamespaces);
+  const { locale, address } = await params;
+
+  const supporter = await getSupporter(address);
+
+  const websiteUrl = process.env.NEXT_PUBLIC_WEBSITE_URL;
 
   return {
-    title: t("seo-title"),
-    description: t("seo-description"),
+    title: supporter.name,
+    description: supporter.description,
+    openGraph: {
+      type: "website",
+      title: supporter.name,
+      description: supporter.description,
+      alternateLocale: ["en", "pt"],
+      url: `${websiteUrl}/${locale}/supporter/${address}/${supporter.name}`,
+      locale,
+      siteName: "Regeneration credit users",
+    },
+    alternates: {
+      canonical: websiteUrl,
+      languages: {
+        en: `${websiteUrl}/en/supporter/${address}/${supporter.name}`,
+        pt: `${websiteUrl}/pt/supporter/${address}/${supporter.name}`,
+      },
+    },
   };
 }
 
