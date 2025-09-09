@@ -1,6 +1,11 @@
+import type { Metadata } from "next";
+
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationsProvider";
-import type { Metadata } from "next";
+
+import { SearchInput } from "./components/SearchInput";
+import { Header } from "@/components/Header/Header";
+import { Footer } from "@/components/Footer/Footer";
 
 const i18nNamespaces = ["home"];
 
@@ -19,11 +24,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function Home({
-  params: { locale },
-}: {
-  params: { locale: string };
-}) {
+export default async function Home({ params }: Props) {
+  const { locale } = await params;
   const { t, resources } = await initTranslations(locale, i18nNamespaces);
 
   return (
@@ -32,11 +34,17 @@ export default async function Home({
       locale={locale}
       resources={resources}
     >
-      <main>
-        <div className="container mx-auto px-5 lg:px-20">
-          teste
-        </div>
-      </main>
+      <div className="flex flex-col w-full h-screen justify-between">
+        <Header t={t} />
+
+        <main>
+          <div className="container mx-auto h-full px-5 lg:px-20 flex flex-col items-center justify-center w-full gap-10">
+            <SearchInput />
+          </div>
+        </main>
+
+        <Footer />
+      </div>
     </TranslationsProvider>
   );
 }

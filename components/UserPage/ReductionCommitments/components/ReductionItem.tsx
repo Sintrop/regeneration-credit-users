@@ -9,13 +9,16 @@ interface Props {
 }
 
 export async function ReductionItem({ calculatorItem, t, address }: Props) {
-  const certificate = await getCalculatorCertificates(address, calculatorItem.id);
+  const certificate = await getCalculatorCertificates(
+    address,
+    calculatorItem.id
+  );
 
   return (
     <div className="flex flex-col py-3 border-b border-gray-300">
-      <p className="font-semibold">{calculatorItem.title}</p>
+      <p className="font-semibold">{calculatorItem.item}</p>
 
-      <div className="flex flex-wrap mt-3 gap-10">
+      <div className="flex flex-wrap mt-3 gap-10 justify-center md:justify-start">
         <ImpactItem
           label={t("carbonImpact")}
           value={Intl.NumberFormat("pt-BR").format(calculatorItem.carbonImpact)}
@@ -24,7 +27,9 @@ export async function ReductionItem({ calculatorItem, t, address }: Props) {
 
         <ImpactItem
           label={t("totalContributed")}
-          value={Intl.NumberFormat("pt-BR", {maximumFractionDigits: 5}).format(certificate)}
+          value={Intl.NumberFormat("pt-BR", {
+            maximumFractionDigits: 5,
+          }).format(certificate)}
           suffix="RC"
         />
       </div>
@@ -39,11 +44,11 @@ interface ImpactItemProps {
 }
 function ImpactItem({ label, value, suffix }: ImpactItemProps) {
   return (
-    <div className="flex flex-col items-center justify-center w-[120px] h-[60px]">
+    <div className="flex flex-col items-center justify-center w-[150px] h-[60px]">
       <p className="font-bold text-green-600 text-xl">
         {value} {suffix && suffix}
       </p>
-      <p>{label}</p>
+      <p className="text-center">{label}</p>
     </div>
   );
 }
