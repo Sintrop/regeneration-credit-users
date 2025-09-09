@@ -17,12 +17,12 @@ export async function InspectionItem({ inspection, t }: Props) {
       </p>
 
       <div className="flex items-center gap-10 justify-center mt-3">
-        <div className="w-32 h-32 gap-5 rounded-2xl overflow-hidden relative flex flex-col items-center justify-center">
+        <div className="w-40 h-32 gap-5 rounded-2xl overflow-hidden relative flex flex-col items-center justify-center">
           <Link
             href={`${process.env.NEXT_PUBLIC_IPFS_GATEWAY}/ipfs/${inspection.justificationReport}`}
             target="_blank"
             rel="noreferer noopener"
-            className="bg-blue-500 rounded-2xl px-10 w-fit h-10 hover:cursor-pointer text-white font-semibold flex items-center justify-center gap-3"
+            className="bg-blue-500 rounded-2xl w-full h-10 hover:cursor-pointer text-white font-semibold flex items-center justify-center gap-3"
           >
             {t("report")}
           </Link>
@@ -31,7 +31,7 @@ export async function InspectionItem({ inspection, t }: Props) {
             href={`${process.env.NEXT_PUBLIC_IPFS_GATEWAY}/ipfs/${inspection.proofPhotos}`}
             target="_blank"
             rel="noreferer noopener"
-            className="bg-blue-500 rounded-2xl px-10 w-fit h-10 hover:cursor-pointer text-white font-semibold flex items-center justify-center gap-3"
+            className="bg-blue-500 rounded-2xl w-full h-10 hover:cursor-pointer text-white font-semibold flex items-center justify-center gap-3"
           >
             {t("proofPhotos")}
           </Link>
@@ -80,7 +80,7 @@ function StatusInspection({ status, t }: StatusInspectionProps) {
     );
   }
 
-  if (status === 4) {
+  if (status === 3) {
     return (
       <div className="px-5 h-8 flex items-center justify-center rounded-2xl bg-red-500 w-fit absolute top-0 right-0">
         <p className="font-bold text-white">{t("invalidated")}</p>
