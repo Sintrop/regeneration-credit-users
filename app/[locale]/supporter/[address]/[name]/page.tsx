@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import LogoRC from "@/public/assets/images/rc.png";
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationsProvider";
 import { getSupporter } from "@/services/supporter/getSupporter";
@@ -8,7 +6,8 @@ import { Hero } from "@/components/UserPage/Hero/Hero";
 import { BurnedTokens } from "@/components/UserPage/BurnedTokens/BurnedTokens";
 import { About } from "@/components/UserPage/About/About";
 import { ReductionCommitments } from "@/components/UserPage/ReductionCommitments/ReductionCommitments";
-import Link from "next/link";
+import { Footer } from "@/components/Footer/Footer";
+import { Header } from "@/components/Header/Header";
 
 const i18nNamespaces = ["supporter"];
 
@@ -57,21 +56,9 @@ export default async function SupporterPage({ params }: Props) {
       locale={locale}
       resources={resources}
     >
+      <Header t={t} />
       <main>
-        <div className="container mx-auto px-5 pt-10 lg:px-20 flex flex-col pb-10">
-          <Link href="/" className="flex items-center justify-center gap-3">
-            <Image
-              alt="Logo regeneration credit"
-              src={LogoRC}
-              width={50}
-              height={50}
-              quality={100}
-            />
-            <p className="text-balck font-bold uppercase">
-              {t("regenerationCredit")}
-            </p>
-          </Link>
-
+        <div className="container mx-auto px-5 lg:px-20 flex flex-col pb-10">
           <div className="flex flex-wrap justify-center gap-5 mt-10">
             <div className="flex flex-col gap-3">
               <Hero
@@ -91,6 +78,8 @@ export default async function SupporterPage({ params }: Props) {
           </div>
         </div>
       </main>
+
+      <Footer />
     </TranslationsProvider>
   );
 }
