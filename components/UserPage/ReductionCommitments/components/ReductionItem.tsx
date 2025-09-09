@@ -9,11 +9,14 @@ interface Props {
 }
 
 export async function ReductionItem({ calculatorItem, t, address }: Props) {
-  const certificate = await getCalculatorCertificates(address, calculatorItem.id);
+  const certificate = await getCalculatorCertificates(
+    address,
+    calculatorItem.id
+  );
 
   return (
     <div className="flex flex-col py-3 border-b border-gray-300">
-      <p className="font-semibold">{calculatorItem.title}</p>
+      <p className="font-semibold">{calculatorItem.item}</p>
 
       <div className="flex flex-wrap mt-3 gap-10">
         <ImpactItem
@@ -24,7 +27,9 @@ export async function ReductionItem({ calculatorItem, t, address }: Props) {
 
         <ImpactItem
           label={t("totalContributed")}
-          value={Intl.NumberFormat("pt-BR", {maximumFractionDigits: 5}).format(certificate)}
+          value={Intl.NumberFormat("pt-BR", {
+            maximumFractionDigits: 5,
+          }).format(certificate)}
           suffix="RC"
         />
       </div>

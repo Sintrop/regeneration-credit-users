@@ -35,6 +35,7 @@ export function SearchInput() {
       setErrorMessage("userNotFound");
     }
   }
+
   return (
     <div className="flex flex-col gap-1">
       <form className="flex flex-col gap-1" onSubmit={handleSubmit}>
