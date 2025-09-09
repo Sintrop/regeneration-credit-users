@@ -11,10 +11,12 @@ import { getSupporter } from "@/services/supporter/getSupporter";
 export function SearchInput() {
   const { t } = useTranslation();
   const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setIsLoading(true);
     setErrorMessage("");
 
     const formData = new FormData(e.currentTarget);
@@ -25,13 +27,18 @@ export function SearchInput() {
       if (userType.userType === 1) {
         const regenerator = await getRegenerator(address);
         router.push(`/regenerator/${address}/${regenerator.name}`);
+        setIsLoading(false);
+        return;
       }
 
       if (userType.userType === 7) {
         const supporter = await getSupporter(address);
         router.push(`/supporter/${address}/${supporter.name}`);
+        setIsLoading(false);
+        return;
       }
     } else {
+      setIsLoading(false);
       setErrorMessage("userNotFound");
     }
   }
@@ -51,10 +58,15 @@ export function SearchInput() {
           />
 
           <button
-            className="w-32 h-12 rounded-2xl items-center justify-center bg-green-600 text-white font-semibold hover:cursor-pointer hover:bg-green-700 duration-200"
+            className="w-32 h-12 rounded-2xl flex items-center justify-center bg-green-600 text-white font-semibold hover:cursor-pointer hover:bg-green-700 duration-200 disabled:cursor-default disabled:opacity-50"
             type="submit"
+            disabled={isLoading}
           >
-            {t("search")}
+            {isLoading ? (
+              <div className="w-5 h-5 bg-white animate-spin" />
+            ) : (
+              t("search")
+            )}
           </button>
         </div>
 
