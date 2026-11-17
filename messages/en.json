@@ -1,0 +1,264 @@
+{
+  "meta": {
+    "title": "Transparency portal · Regeneration Credit",
+    "description": "Check on the blockchain the certificates, offsets, inspections and impact of Regeneration Credit users."
+  },
+  "nav": {
+    "brand": "Regeneration Credit",
+    "subtitle": "Transparency portal",
+    "label": "Main navigation",
+    "home": "Home",
+    "regenerators": "Regenerators",
+    "supporters": "Supporters",
+    "community": "Community",
+    "verify": "How to verify"
+  },
+  "footer": {
+    "note": "All data on this page is read directly from the Regeneration Credit contracts on the Sintrop blockchain.",
+    "website": "Website",
+    "explorer": "Explorer",
+    "docs": "Docs"
+  },
+  "common": {
+    "copy": "Copy",
+    "copied": "Copied",
+    "theme": "Theme",
+    "theme_system": "system",
+    "theme_light": "light",
+    "theme_dark": "dark",
+    "language": "Language"
+  },
+  "verify": {
+    "verified": "{role} registered in the Regeneration Credit",
+    "since": "since {date}.",
+    "readNow": "Data read from the Sintrop blockchain at {time}.",
+    "checkOnExplorer": "Check on the explorer"
+  },
+  "share": {
+    "download": "Download certificate",
+    "copied": "Link copied",
+    "copyLink": "Copy link",
+    "more": "Share"
+  },
+  "map": {
+    "unavailable": "The map is not available right now.",
+    "label": "Map of the regeneration areas",
+    "geojson": "Download area (GeoJSON)"
+  },
+  "inspection": {
+    "none": "No inspections yet.",
+    "title": "Inspection #{id}",
+    "status": {
+      "open": "Waiting for an inspector",
+      "accepted": "Accepted",
+      "inspected": "Completed",
+      "invalidated": "Invalidated"
+    },
+    "inspectedOn": "completed on {date}",
+    "requestedOn": "requested on {date}",
+    "by": "Inspector:",
+    "at": "Regenerator:",
+    "trees": "Trees",
+    "biodiversity": "Species",
+    "score": "Score",
+    "invalidatedNote": "Invalidated by the community on {date}; it doesn't count toward the impact.",
+    "photos": "Photos (PDF)",
+    "report": "Report (PDF)"
+  },
+  "payments": {
+    "none": "No RC received yet.",
+    "viewTx": "View transaction on the explorer"
+  },
+  "notRegistered": {
+    "titleRole": "This address is not a registered {role}",
+    "title": "This address is not a registered user",
+    "body": "No Regeneration Credit profile is linked to this wallet. If you got here from a QR code, the certificate may not be authentic.",
+    "explorer": "View wallet on the explorer",
+    "home": "Go to home"
+  },
+  "roles": {
+    "regenerator": "Regenerator",
+    "inspector": "Inspector",
+    "researcher": "Researcher",
+    "developer": "Developer",
+    "contributor": "Contributor",
+    "activist": "Activist",
+    "supporter": "Supporter",
+    "inspector_plural": "Inspectors",
+    "researcher_plural": "Researchers",
+    "developer_plural": "Developers",
+    "contributor_plural": "Contributors",
+    "activist_plural": "Activists"
+  },
+  "supporter": {
+    "metaDescription": "{name} offset {amount} in the Regeneration Credit, funding {carbon} of carbon in regeneration. Check it on the blockchain.",
+    "certificateTitle": "Contribution certificate",
+    "certificateSubtitle": "The same numbers as the certificate issued by the app.",
+    "shareTitle": "{name}'s contribution certificate in the Regeneration Credit",
+    "contributedWith": "Contributed with",
+    "fundingImpactOf": "Funding the impact of",
+    "impact": {
+      "carbon": "Carbon",
+      "trees": "Trees",
+      "biodiversity": "Species",
+      "area": "Area"
+    },
+    "perToken": "{value} per RC today",
+    "impactNote": "The impact per RC is recalculated by the RegenerationCreditImpact contract with every new inspection, so these numbers may differ from a certificate generated on another date. The total of RC offset never changes.",
+    "offsetsTitle": "Offset history",
+    "offsetsSubtitle": "{count, plural, =0 {No offsets} one {# offset recorded on the blockchain} other {# offsets recorded on the blockchain}}",
+    "noOffsets": "No offsets made through the Supporter contract.",
+    "unknownItem": "Item #{id}",
+    "viewTx": "transaction",
+    "directBurns": "Besides the offsets listed, {amount} were certified by burning tokens directly.",
+    "byItemTitle": "Offsets by item",
+    "commitmentsTitle": "Reduction commitments",
+    "commitmentsSubtitle": "Items the Supporter has publicly committed to reduce.",
+    "noCommitments": "No commitments declared.",
+    "carbonPerUnit": "{value} of CO₂ per {unit}",
+    "contributedToItem": "Offset in this item: {amount}",
+    "thesis": "Scientific basis of the calculation",
+    "commissions": "Received {amount} in commissions for referring {count, plural, one {# offset} other {# offsets}} by invited Supporters."
+  },
+  "regenerator": {
+    "metaDescription": "{name} regenerates {area} with {inspections} inspections recorded in the Regeneration Credit. Check it on the blockchain.",
+    "pendingInspection": "Inspection requested",
+    "invalidated": "Invalidated",
+    "certificateTitle": "Regeneration certificate",
+    "certificateSubtitle": "The same numbers as the certificate issued by the app.",
+    "shareTitle": "{name}'s regeneration certificate in the Regeneration Credit",
+    "score": "Regeneration score",
+    "scoreHint": "sum of the inspections",
+    "inspections": "Inspections",
+    "area": "Area under regeneration",
+    "treesAverage": "Trees (average)",
+    "biodiversityAverage": "Species (average)",
+    "averageHint": "average of {count, plural, one {# inspection} other {# inspections}}",
+    "scoreNote": "Each inspection counts trees and species in the area and produces a score from the Regeneration Index. The regeneration score adds up the inspections; the tree and species averages use the whole history, like the certificate.",
+    "areaTitle": "Area under regeneration",
+    "areaSubtitle": "{area} bounded by {points} points recorded on the blockchain.",
+    "noCoordinates": "No coordinates recorded.",
+    "inspectionsTitle": "Inspections",
+    "inspectionsSubtitle": "{realized} completed out of {total} in the history. Reports and photos are stored on IPFS.",
+    "receivedTitle": "RC received",
+    "receivedSubtitle": "Rewards paid to this wallet by the Regenerators pool.",
+    "delationsTitle": "Reports ({count})",
+    "delationsSubtitle": "Any user can file a report; the community votes on invalidation.",
+    "noDelations": "No reports.",
+    "delationBy": "By {informer}"
+  },
+  "role": {
+    "summary": "Summary",
+    "about": {
+      "inspector": "Inspectors visit the areas, count trees and species and record the results with photos and a report.",
+      "researcher": "Researchers publish research, evaluation methods and the impact calculator items.",
+      "developer": "Developers publish reports of their work on the protocol's code and apps.",
+      "contributor": "Contributors publish reports of contributions such as education, translation, design and documentation.",
+      "activist": "Activists invite Regenerators and Inspectors to the community."
+    },
+    "level": "Level",
+    "levelHint": "sets the share of the pool rewards",
+    "stats": {
+      "inspectionsDone": "Inspections completed",
+      "giveUps": "Give-ups",
+      "researches": "Research published",
+      "calculatorItems": "Calculator items",
+      "reports": "Reports",
+      "contributions": "Contributions"
+    },
+    "received": "RC received",
+    "inspectionsTitle": "Inspections completed",
+    "inspectionsSubtitle": "{count, plural, =0 {No inspections} one {# inspection} other {# inspections}}",
+    "invitedTitle": "Invited",
+    "invitedSubtitle": "{count, plural, =0 {No invitations sent} one {# person invited} other {# people invited}}",
+    "noInvited": "No invitations sent.",
+    "pending": "Not registered yet",
+    "paymentsTitle": "RC received from the pool"
+  },
+  "certificateImage": {
+    "subtitle": "Transparency portal",
+    "contributedWith": "Contributed with",
+    "carbon": "Carbon",
+    "trees": "Trees",
+    "biodiversity": "Species",
+    "area": "Area",
+    "score": "Regeneration score",
+    "inspections": "Inspections",
+    "verified": "Verifiable on the Sintrop blockchain",
+    "fileName": "certificate"
+  },
+  "search": {
+    "label": "Search by name or wallet",
+    "placeholder": "Regenerator or Supporter name, or wallet address",
+    "submit": "Search",
+    "notFound": "No user found with that name."
+  },
+  "howTo": {
+    "title": "How to verify a certificate",
+    "subtitle": "Regeneration Credit certificates can be checked by anyone, without relying on whoever issued them.",
+    "scan": {
+      "title": "Scan the QR code",
+      "body": "The certificate's QR code opens the Supporter's or Regenerator's public page on this portal."
+    },
+    "compare": {
+      "title": "Compare the numbers",
+      "body": "The \"Certificate\" block shows the same numbers as the certificate, read from the blockchain right now."
+    },
+    "history": {
+      "title": "Check the history",
+      "body": "Every offset and every inspection is listed with its date, amounts and documents."
+    },
+    "explorer": {
+      "title": "Go to the source",
+      "body": "The \"transaction\" and \"Check on the explorer\" links open the original record on the Sintrop blockchain."
+    },
+    "more": "Want to understand the protocol rules?",
+    "docs": "Read the docs."
+  },
+  "home": {
+    "kicker": "Regeneration Credit",
+    "title": "Regeneration of Nature that anyone can verify",
+    "subtitle": "See who regenerates, who supports it and the impact of each certificate, straight from the blockchain.",
+    "impactTitle": "System impact",
+    "impactSubtitle": "Totals calculated by the RegenerationCreditImpact contract from the inspections.",
+    "trees": "Trees",
+    "biodiversity": "Species",
+    "carbon": "Estimated carbon",
+    "area": "Area under regeneration",
+    "regenerators": "Regenerators",
+    "inspections": "Inspections completed",
+    "supporters": "Supporters",
+    "certified": "RC offset",
+    "mapTitle": "Areas under regeneration",
+    "mapSubtitle": "{count} areas recorded. Click an area to see the Regenerator.",
+    "topRegenerators": "Regenerators",
+    "topSupporters": "Supporters",
+    "seeAll": "See all",
+    "scoreShort": "{score} pts",
+    "activityTitle": "Recent activity",
+    "activityOffset": "<who>{name}</who> offset {amount}",
+    "activityInspection": "<who>{name}</who> received an inspection with {trees} trees",
+    "tx": "transaction"
+  },
+  "directory": {
+    "filter": "Filter by name or wallet",
+    "empty": "No one found.",
+    "regeneratorsTitle": "Regenerators",
+    "regeneratorsSubtitle": "People and communities regenerating areas and receiving Regeneration Credit inspections.",
+    "mapTitle": "Map of the areas",
+    "count": "{count, plural, one {# Regenerator} other {# Regenerators}}",
+    "regeneratorMeta": "{score} pts · {inspections, plural, one {# inspection} other {# inspections}}",
+    "invalidated": "invalidated",
+    "supportersTitle": "Supporters",
+    "supportersSubtitle": "People and companies offsetting their impact by funding regeneration.",
+    "supportersTotal": "{count} Supporters have offset {amount} in total.",
+    "offsets": "{count, plural, =0 {no offsets} one {# offset} other {# offsets}}",
+    "communityTitle": "Community",
+    "communitySubtitle": "The other roles that keep the protocol running."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The address doesn't exist or the wallet is not valid.",
+    "home": "Go to home"
+  }
+}
