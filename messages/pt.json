@@ -1,0 +1,264 @@
+{
+  "meta": {
+    "title": "Portal de transparência · Crédito de Regeneração",
+    "description": "Confira na blockchain os certificados, as compensações, as inspeções e o impacto dos usuários do Crédito de Regeneração."
+  },
+  "nav": {
+    "brand": "Crédito de Regeneração",
+    "subtitle": "Portal de transparência",
+    "label": "Navegação principal",
+    "home": "Início",
+    "regenerators": "Regeneradores",
+    "supporters": "Apoiadores",
+    "community": "Comunidade",
+    "verify": "Como verificar"
+  },
+  "footer": {
+    "note": "Todos os dados desta página são lidos diretamente dos contratos do Crédito de Regeneração na blockchain Sintrop.",
+    "website": "Site",
+    "explorer": "Explorer",
+    "docs": "Documentação"
+  },
+  "common": {
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "theme": "Tema",
+    "theme_system": "automático",
+    "theme_light": "claro",
+    "theme_dark": "escuro",
+    "language": "Idioma"
+  },
+  "verify": {
+    "verified": "{role} cadastrado no Crédito de Regeneração",
+    "since": "desde {date}.",
+    "readNow": "Dados lidos da blockchain Sintrop em {time}.",
+    "checkOnExplorer": "Conferir no explorer"
+  },
+  "share": {
+    "download": "Baixar certificado",
+    "copied": "Link copiado",
+    "copyLink": "Copiar link",
+    "more": "Compartilhar"
+  },
+  "map": {
+    "unavailable": "O mapa não está disponível no momento.",
+    "label": "Mapa das áreas em regeneração",
+    "geojson": "Baixar área (GeoJSON)"
+  },
+  "inspection": {
+    "none": "Nenhuma inspeção ainda.",
+    "title": "Inspeção #{id}",
+    "status": {
+      "open": "Aguardando inspetor",
+      "accepted": "Aceita",
+      "inspected": "Realizada",
+      "invalidated": "Invalidada"
+    },
+    "inspectedOn": "realizada em {date}",
+    "requestedOn": "pedida em {date}",
+    "by": "Inspetor:",
+    "at": "Regenerador:",
+    "trees": "Árvores",
+    "biodiversity": "Espécies",
+    "score": "Pontuação",
+    "invalidatedNote": "Invalidada pela comunidade em {date}; não conta para o impacto.",
+    "photos": "Fotos (PDF)",
+    "report": "Relatório (PDF)"
+  },
+  "payments": {
+    "none": "Nenhum RC recebido ainda.",
+    "viewTx": "Ver transação no explorer"
+  },
+  "notRegistered": {
+    "titleRole": "Este endereço não é um {role} cadastrado",
+    "title": "Este endereço não é um usuário cadastrado",
+    "body": "Nenhum perfil do Crédito de Regeneração está ligado a esta carteira. Se você chegou aqui por um QR code, o certificado pode não ser autêntico.",
+    "explorer": "Ver carteira no explorer",
+    "home": "Ir para o início"
+  },
+  "roles": {
+    "regenerator": "Regenerador",
+    "inspector": "Inspetor",
+    "researcher": "Pesquisador",
+    "developer": "Desenvolvedor",
+    "contributor": "Contribuidor",
+    "activist": "Ativista",
+    "supporter": "Apoiador",
+    "inspector_plural": "Inspetores",
+    "researcher_plural": "Pesquisadores",
+    "developer_plural": "Desenvolvedores",
+    "contributor_plural": "Contribuidores",
+    "activist_plural": "Ativistas"
+  },
+  "supporter": {
+    "metaDescription": "{name} compensou {amount} no Crédito de Regeneração, financiando {carbon} de carbono em regeneração. Confira na blockchain.",
+    "certificateTitle": "Certificado de contribuição",
+    "certificateSubtitle": "Os mesmos números do certificado emitido pelo app.",
+    "shareTitle": "Certificado de contribuição de {name} no Crédito de Regeneração",
+    "contributedWith": "Contribuiu com",
+    "fundingImpactOf": "Financiando o impacto de",
+    "impact": {
+      "carbon": "Carbono",
+      "trees": "Árvores",
+      "biodiversity": "Espécies",
+      "area": "Área"
+    },
+    "perToken": "{value} por RC hoje",
+    "impactNote": "O impacto por RC é recalculado pelo contrato RegenerationCreditImpact a cada nova inspeção. Por isso, estes números podem ser diferentes dos que aparecem num certificado gerado em outra data. O total de RC compensados nunca muda.",
+    "offsetsTitle": "Histórico de compensações",
+    "offsetsSubtitle": "{count, plural, =0 {Nenhuma compensação} one {# compensação registrada na blockchain} other {# compensações registradas na blockchain}}",
+    "noOffsets": "Nenhuma compensação feita pelo contrato de Apoiadores.",
+    "unknownItem": "Item #{id}",
+    "viewTx": "transação",
+    "directBurns": "Além das compensações listadas, {amount} foram certificados por queima direta de tokens.",
+    "byItemTitle": "Compensações por item",
+    "commitmentsTitle": "Compromissos de redução",
+    "commitmentsSubtitle": "Itens que o Apoiador se comprometeu publicamente a reduzir.",
+    "noCommitments": "Nenhum compromisso declarado.",
+    "carbonPerUnit": "{value} de CO₂ por {unit}",
+    "contributedToItem": "Compensado neste item: {amount}",
+    "thesis": "Base científica do cálculo",
+    "commissions": "Recebeu {amount} em comissões por indicar {count, plural, one {# compensação} other {# compensações}} de Apoiadores convidados."
+  },
+  "regenerator": {
+    "metaDescription": "{name} regenera {area} com {inspections} inspeções registradas no Crédito de Regeneração. Confira na blockchain.",
+    "pendingInspection": "Inspeção pedida",
+    "invalidated": "Invalidado",
+    "certificateTitle": "Certificado de regeneração",
+    "certificateSubtitle": "Os mesmos números do certificado emitido pelo app.",
+    "shareTitle": "Certificado de regeneração de {name} no Crédito de Regeneração",
+    "score": "Pontuação de regeneração",
+    "scoreHint": "soma das inspeções",
+    "inspections": "Inspeções",
+    "area": "Área em regeneração",
+    "treesAverage": "Árvores (média)",
+    "biodiversityAverage": "Espécies (média)",
+    "averageHint": "média de {count, plural, one {# inspeção} other {# inspeções}}",
+    "scoreNote": "Cada inspeção conta árvores e espécies na área e gera uma pontuação pelo Índice de Regeneração. A pontuação de regeneração soma as inspeções; as médias de árvores e espécies usam todo o histórico, como no certificado.",
+    "areaTitle": "Área em regeneração",
+    "areaSubtitle": "{area} delimitados por {points} pontos registrados na blockchain.",
+    "noCoordinates": "Nenhuma coordenada registrada.",
+    "inspectionsTitle": "Inspeções",
+    "inspectionsSubtitle": "{realized} realizadas de {total} no histórico. Os relatórios e as fotos ficam no IPFS.",
+    "receivedTitle": "RC recebidos",
+    "receivedSubtitle": "Recompensas pagas pelo pool dos Regeneradores a esta carteira.",
+    "delationsTitle": "Denúncias ({count})",
+    "delationsSubtitle": "Qualquer usuário pode denunciar; a comunidade vota para invalidar ou não.",
+    "noDelations": "Nenhuma denúncia.",
+    "delationBy": "Por {informer}"
+  },
+  "role": {
+    "summary": "Resumo",
+    "about": {
+      "inspector": "Inspetores visitam as áreas, contam árvores e espécies e registram os resultados com fotos e relatório.",
+      "researcher": "Pesquisadores publicam pesquisas, métodos de avaliação e os itens da calculadora de impacto.",
+      "developer": "Desenvolvedores publicam relatórios do trabalho no código e nos aplicativos do protocolo.",
+      "contributor": "Contribuidores publicam relatórios de contribuições como educação, tradução, design e documentação.",
+      "activist": "Ativistas convidam Regeneradores e Inspetores para a comunidade."
+    },
+    "level": "Nível",
+    "levelHint": "define a parte das recompensas do pool",
+    "stats": {
+      "inspectionsDone": "Inspeções realizadas",
+      "giveUps": "Desistências",
+      "researches": "Pesquisas publicadas",
+      "calculatorItems": "Itens da calculadora",
+      "reports": "Relatórios",
+      "contributions": "Contribuições"
+    },
+    "received": "RC recebidos",
+    "inspectionsTitle": "Inspeções realizadas",
+    "inspectionsSubtitle": "{count, plural, =0 {Nenhuma inspeção} one {# inspeção} other {# inspeções}}",
+    "invitedTitle": "Convidados",
+    "invitedSubtitle": "{count, plural, =0 {Nenhum convite enviado} one {# pessoa convidada} other {# pessoas convidadas}}",
+    "noInvited": "Nenhum convite enviado.",
+    "pending": "Ainda não se cadastrou",
+    "paymentsTitle": "RC recebidos do pool"
+  },
+  "certificateImage": {
+    "subtitle": "Portal de transparência",
+    "contributedWith": "Contribuiu com",
+    "carbon": "Carbono",
+    "trees": "Árvores",
+    "biodiversity": "Espécies",
+    "area": "Área",
+    "score": "Pontuação de regeneração",
+    "inspections": "Inspeções",
+    "verified": "Verificável na blockchain Sintrop",
+    "fileName": "certificado"
+  },
+  "search": {
+    "label": "Buscar por nome ou carteira",
+    "placeholder": "Nome do Regenerador, Apoiador ou endereço da carteira",
+    "submit": "Buscar",
+    "notFound": "Nenhum usuário encontrado com esse nome."
+  },
+  "howTo": {
+    "title": "Como verificar um certificado",
+    "subtitle": "Os certificados do Crédito de Regeneração podem ser conferidos por qualquer pessoa, sem depender de quem os emitiu.",
+    "scan": {
+      "title": "Escaneie o QR code",
+      "body": "O QR code do certificado abre a página pública do Apoiador ou do Regenerador neste portal."
+    },
+    "compare": {
+      "title": "Compare os números",
+      "body": "O bloco \"Certificado\" mostra os mesmos números do certificado, lidos agora da blockchain."
+    },
+    "history": {
+      "title": "Confira o histórico",
+      "body": "Cada compensação e cada inspeção aparece com data, valores e documentos."
+    },
+    "explorer": {
+      "title": "Vá até a fonte",
+      "body": "Os links \"transação\" e \"Conferir no explorer\" abrem o registro original na blockchain Sintrop."
+    },
+    "more": "Quer entender as regras do protocolo?",
+    "docs": "Leia a documentação."
+  },
+  "home": {
+    "kicker": "Crédito de Regeneração",
+    "title": "Regeneração da Natureza que qualquer pessoa pode conferir",
+    "subtitle": "Veja quem regenera, quem apoia e o impacto de cada certificado, direto da blockchain.",
+    "impactTitle": "Impacto do sistema",
+    "impactSubtitle": "Totais calculados pelo contrato RegenerationCreditImpact a partir das inspeções.",
+    "trees": "Árvores",
+    "biodiversity": "Espécies",
+    "carbon": "Carbono estimado",
+    "area": "Área em regeneração",
+    "regenerators": "Regeneradores",
+    "inspections": "Inspeções realizadas",
+    "supporters": "Apoiadores",
+    "certified": "RC compensados",
+    "mapTitle": "Áreas em regeneração",
+    "mapSubtitle": "{count} áreas registradas. Clique numa área para ver o Regenerador.",
+    "topRegenerators": "Regeneradores",
+    "topSupporters": "Apoiadores",
+    "seeAll": "Ver todos",
+    "scoreShort": "{score} pts",
+    "activityTitle": "Atividade recente",
+    "activityOffset": "<who>{name}</who> compensou {amount}",
+    "activityInspection": "<who>{name}</who> recebeu uma inspeção com {trees} árvores",
+    "tx": "transação"
+  },
+  "directory": {
+    "filter": "Filtrar por nome ou carteira",
+    "empty": "Ninguém encontrado.",
+    "regeneratorsTitle": "Regeneradores",
+    "regeneratorsSubtitle": "Pessoas e comunidades que regeneram áreas e recebem inspeções do Crédito de Regeneração.",
+    "mapTitle": "Mapa das áreas",
+    "count": "{count, plural, one {# Regenerador} other {# Regeneradores}}",
+    "regeneratorMeta": "{score} pts · {inspections, plural, one {# inspeção} other {# inspeções}}",
+    "invalidated": "invalidado",
+    "supportersTitle": "Apoiadores",
+    "supportersSubtitle": "Pessoas e empresas que compensam seu impacto financiando a regeneração.",
+    "supportersTotal": "{count} Apoiadores compensaram {amount} no total.",
+    "offsets": "{count, plural, =0 {nenhuma compensação} one {# compensação} other {# compensações}}",
+    "communityTitle": "Comunidade",
+    "communitySubtitle": "Os outros papéis que mantêm o protocolo funcionando."
+  },
+  "notFound": {
+    "title": "Página não encontrada",
+    "body": "O endereço digitado não existe ou a carteira informada não é válida.",
+    "home": "Ir para o início"
+  }
+}
